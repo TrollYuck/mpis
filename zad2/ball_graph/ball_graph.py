@@ -57,29 +57,29 @@ c3_graph = np.divide(yc_mean, np.power(unique_x, 2))
 d1_graph = np.divide(yd_mean, unique_x)
 d2_graph = np.divide(yd_mean, np.multiply(unique_x, np.log(unique_x)))
 d3_graph = np.divide(yd_mean, np.power(unique_x, 2))
-
+'''
 #podpunkt e
 e1_graph = np.divide(yd_c_mean, unique_x)
 e2_graph = np.divide(yd_c_mean, np.multiply(unique_x, np.log(unique_x)))
-e3_graph = np.divide(yd_c_mean, np.power(unique_x, 2))
-'''
+e3_graph = np.divide(yd_c_mean, np.multiply(unique_x, np.log(np.log(unique_x))))
+
 ################################
 
 plt.figure(figsize=(16,11),dpi=300)
 plt.xlabel('n')
 plt.ylabel('M')
-plt.yscale('log') #dobór skali
-plt.title('Podpunkt A (Skala logarytmiczna)') #dobór tytułu
+plt.yscale('linear') #dobór skali
+plt.title('Podpunkt E (Skala liniowa)') #dobór tytułu
 
 #plt.scatter(x, yd_c, label='Dn - Cn', s = 5,  zorder = 1) #naniesienie punktów na wykres
 
-#plt.plot(unique_x, a1_graph, color='red', label='b(n)/n' , zorder = 2) #naniesienie funkcji na wykres
-#plt.plot(unique_x, a2_graph, color='green', label='b(n)/sqrt(n)' , zorder = 3)
-#plt.plot(unique_x, e3_graph, color='blue', label='e(n)/(n^2)' , zorder = 4)
+plt.plot(unique_x, e1_graph, color='red', label='e(n)/n' , zorder = 2) #naniesienie funkcji na wykres
+plt.plot(unique_x, e2_graph, color='green', label='e(n)/(n ln n)' , zorder = 3)
+plt.plot(unique_x, e3_graph, color='blue', label='e(n)/(n ln ln n)' , zorder = 4)
 
 plt.minorticks_on() #włączenie podziałki pomocniczej
 plt.legend() #włączenie legendy
 plt.grid(True) #włączenie siatki
 
-plt.savefig('PdpAlog.png', format='png', dpi=300) #zapis wykresu do pliku
+plt.savefig('PdpE.png', format='png', dpi=300) #zapis wykresu do pliku
 plt.show()
