@@ -1,0 +1,12 @@
+﻿  monte_carlo.cpp
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(115,22): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(115,22): warning C4244:         with
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(115,22): warning C4244:         [
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(115,22): warning C4244:             _Ty=double
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(115,22): warning C4244:         ]
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(118,57): warning C4838: conversion from 'int' to '_Ty' requires a narrowing conversion
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(118,57): warning C4838:         with
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(118,57): warning C4838:         [
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(118,57): warning C4838:             _Ty=double
+C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\monte_carlo.cpp(118,57): warning C4838:         ]
+  diff_approx.vcxproj -> C:\Users\nieto\Documents\StudiaIAL\sem3\mpis\zad1\diff_approx\x64\Debug\diff_approx.exe
