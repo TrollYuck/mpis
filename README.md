@@ -29,3 +29,5 @@ Excercise No. 2: **Balls and Bins Model**
   - Conduct experiments with independent repetitions for various bin counts (e.g., up to 100,000 bins).
   - Analyze and visualize data using ratio-based metrics and hypothesize asymptotic behaviors.
   - Explore applications like hash functions and cryptographic hashing using the birthday paradox.
+
+
