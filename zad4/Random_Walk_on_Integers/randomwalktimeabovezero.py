@@ -19,14 +19,21 @@ def calculate_pn(n, k):
         pn_values.append(pn)
     return pn_values
 
-def plot_histogram(pn_values, n):
+def plot_histogram_with_arcsine(pn_values, n):
     plt.figure()
-    plt.hist(pn_values, bins=20, density=True, alpha=0.6, color='g')
+    plt.hist(pn_values, bins=20, density=True, alpha=0.6, color='g', label='Empiriczny Histogram')
+
+    # Arcus sine distribution density function
+    x = np.linspace(0, 1, 1000)
+    arcsine_density = 1 / (np.pi * np.sqrt(x * (1 - x)))
+    plt.plot(x, arcsine_density, 'r-', label='Arcsine Distribution')
+
     plt.xlabel('P_N')
     plt.ylabel('Density')
     plt.title(f'Histogram frakcji czasu P_N dla N = {n}')
+    plt.legend()
     plt.grid(True)
-    plt.savefig(f'histogram_{n}.png', dpi=300, transparent=True)
+    plt.savefig(f'histogram_arcsine_{n}.png', dpi=300, transparent=True)
     plt.show()
 
 n_values = [100, 1000, 10000]
@@ -34,4 +41,4 @@ k = 5000  # liczba powtórzeń
 
 for n in n_values:
     PN_values = calculate_pn(n, k)
-    plot_histogram(PN_values, n)
+    plot_histogram_with_arcsine(PN_values, n)
